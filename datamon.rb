@@ -10,7 +10,7 @@ class Datamon < Formula
     # nm = "datamon"
     # tar xzf datamon.mac.tgz
     #system "mv", "datamon", nm
-    bin.install datamon
+    bin.install "datamon"
   end
 
   # test do
