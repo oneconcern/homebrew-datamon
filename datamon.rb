@@ -7,7 +7,7 @@ class Datamon < Formula
 
   def install
     nm = "datamon"
-    tar xzf datamon_mac.tgz
+    tar xzf datamon.mac.tgz
     #system "mv", "datamon", nm
     bin.install nm
   end
