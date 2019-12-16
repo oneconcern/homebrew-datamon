@@ -7,11 +7,11 @@ class Datamon < Formula
 
   if OS.mac?
     url "https://github.com/oneconcern/datamon/releases/download/v2.0.0-beta/datamon_2.0.0-beta_darwin_amd64.tar.gz"
-    sha256 "c650838cd9c2365ec4dd50f8be804eaa57400074003f10f594ff5e0e25bd2675"
+    sha256 "f44211e1bfe3e756a6aa71a5c9afed5bc506653e594844bdbffa72a17c10ad51"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/oneconcern/datamon/releases/download/v2.0.0-beta/datamon_2.0.0-beta_linux_amd64.tar.gz"
-      sha256 "21c62005a24d5689a1a6517f2c3b877d8f39f582882e4fb1ae92acde1563d2c0"
+      sha256 "5dbaeed563d448c9e17a514ed71001117f7e1c44e085b205a259beca650839a1"
     end
   end
 
@@ -20,9 +20,6 @@ class Datamon < Formula
   end
 
   test do
-    # TODO(frederic): this hack will no longer be necessary when we remove this
-    # global env requirement for command "version".
-    ENV["DATAMON_GLOBAL_CONFIG"] = "x"
     system "#{bin}/datamon", "version"
   end
 end
