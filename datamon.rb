@@ -7,11 +7,11 @@ class Datamon < Formula
 
   if OS.mac?
     url "https://github.com/oneconcern/datamon/releases/download/v2.0.0-beta3/datamon_2.0.0-beta3_darwin_amd64.tar.gz"
-    sha256 "012eb70abf25435c8c4df8459927ccc210d3efacd6677c93dce773f01c34f8f0"
+    sha256 "bf40ec251dd3bc630e808213470e443ebc14006387ebd077e829f6b6ef3315c7"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/oneconcern/datamon/releases/download/v2.0.0-beta3/datamon_2.0.0-beta3_linux_amd64.tar.gz"
-      sha256 "8265bd2ab6406e38ee4f25875a41b02c709abd8b483cf3ca1fc82381b11cd962"
+      sha256 "9407f5c30dd355375f9b395d3f420d5d4b33bc38a7652991c5735a0c12fb0397"
     end
   end
 
