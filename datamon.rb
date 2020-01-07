@@ -2,16 +2,16 @@
 class Datamon < Formula
   desc "A datascience tool to work with data at rest"
   homepage "https://github.com/oneconcern/datamon"
-  version "2.0.0-beta4"
+  version "2.0.0-beta5"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/oneconcern/datamon/releases/download/v2.0.0-beta4/datamon_2.0.0-beta4_darwin_amd64.tar.gz"
-    sha256 "67d3e2e76c0dfd6c0537d567f76a776fa357bcb07cbadc74d47297c9d4378528"
+    url "https://github.com/oneconcern/datamon/releases/download/v2.0.0-beta5/datamon_2.0.0-beta5_darwin_amd64.tar.gz"
+    sha256 "b45319673f91f892fc8606210adb1d6a71a3d458d5b5187cda25e7188d87ae75"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/oneconcern/datamon/releases/download/v2.0.0-beta4/datamon_2.0.0-beta4_linux_amd64.tar.gz"
-      sha256 "3ec7ade0885bf17878c864d79e6840686decb3b51b489fac4c357286adb1fd99"
+      url "https://github.com/oneconcern/datamon/releases/download/v2.0.0-beta5/datamon_2.0.0-beta5_linux_amd64.tar.gz"
+      sha256 "45c22ce9fb1cbe577c4fbc3e8175a6b6e38a1c29d8e22f20d4b1492b9d2adbb9"
     end
   end
 
