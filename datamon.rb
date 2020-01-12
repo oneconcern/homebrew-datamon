@@ -2,24 +2,24 @@
 class Datamon < Formula
   desc "A datascience tool to work with data at rest"
   homepage "https://github.com/oneconcern/datamon"
-  version "2.0.0-beta5"
+  version "2.0.0-beta6"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/oneconcern/datamon/releases/download/v2.0.0-beta5/datamon_2.0.0-beta5_darwin_amd64.tar.gz"
-    sha256 "b45319673f91f892fc8606210adb1d6a71a3d458d5b5187cda25e7188d87ae75"
+    url "https://github.com/oneconcern/datamon/releases/download/v2.0.0-beta6/datamon_2.0.0-beta6_darwin_amd64.tar.gz"
+    sha256 "aff901f5ffbc4312da2c643a20c7604d8f492dbae7f934b53a93ffb4bf1c075d"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/oneconcern/datamon/releases/download/v2.0.0-beta5/datamon_2.0.0-beta5_linux_amd64.tar.gz"
-      sha256 "45c22ce9fb1cbe577c4fbc3e8175a6b6e38a1c29d8e22f20d4b1492b9d2adbb9"
+      url "https://github.com/oneconcern/datamon/releases/download/v2.0.0-beta6/datamon_2.0.0-beta6_linux_amd64.tar.gz"
+      sha256 "5c2ef7e31c9cc00b604be144af44d7a516c19d1032bbb9d223b3cfbeaf28c188"
     end
   end
 
   def install
-    bin.install "datamon"
+    bin.install "datamon2"
   end
 
   test do
-    system "#{bin}/datamon", "version"
+    system "#{bin}/datamon2", "version"
   end
 end
