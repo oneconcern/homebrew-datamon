@@ -5,23 +5,31 @@
 class Datamon < Formula
   desc "A datascience tool to work with data at rest"
   homepage "https://github.com/oneconcern/datamon"
-  version "2.4.0"
+  version "2.4.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/oneconcern/datamon/releases/download/v2.4.0/datamon_2.4.0_darwin_amd64.tar.gz"
-      sha256 "a8cf7b708cd0d7181e398908a2c2bccd5d79b64b993de92e45f4759cb9c5bdd0"
+    url "https://github.com/oneconcern/datamon/releases/download/v2.4.1/datamon_2.4.1_darwin_amd64.tar.gz"
+    sha256 "ebf31563a52780fd037c0f569ee5af04c3009685eb8640bd013d71728ee764ad"
 
-      def install
-        bin.install "datamon2"
+    def install
+      bin.install "datamon2"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Datamon
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/oneconcern/datamon/releases/download/v2.4.0/datamon_2.4.0_linux_amd64.tar.gz"
-      sha256 "3d4c511ee88e3e4696bbac62500e17c3362556286f140176f96c75740560a495"
+      url "https://github.com/oneconcern/datamon/releases/download/v2.4.1/datamon_2.4.1_linux_amd64.tar.gz"
+      sha256 "404754ded60537a718e99771550657afaa94f490433b33c10575900aba1fb0ab"
 
       def install
         bin.install "datamon2"
