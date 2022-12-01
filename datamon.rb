@@ -5,11 +5,11 @@
 class Datamon < Formula
   desc "A datascience tool to work with data at rest"
   homepage "https://github.com/oneconcern/datamon"
-  version "2.5.1"
+  version "2.5.2"
 
   on_macos do
-    url "https://github.com/oneconcern/datamon/releases/download/v2.5.1/datamon_2.5.1_darwin_amd64.tar.gz"
-    sha256 "ef1d95d88ab89de62327ad475d68225161dae146989974af6b619a63cd43ddff"
+    url "https://github.com/oneconcern/datamon/releases/download/v2.5.2/datamon_2.5.2_darwin_amd64.tar.gz"
+    sha256 "2d06e36810f3739bbd9e9217e923974968c228358492b96214d6eea0c2150d2b"
 
     def install
       bin.install "datamon2"
@@ -28,8 +28,8 @@ class Datamon < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/oneconcern/datamon/releases/download/v2.5.1/datamon_2.5.1_linux_amd64.tar.gz"
-      sha256 "7c6907c4ad32ed48f2c857fd8ef5f064b1cb75fcea7f443b2048988939d6c99e"
+      url "https://github.com/oneconcern/datamon/releases/download/v2.5.2/datamon_2.5.2_linux_amd64.tar.gz"
+      sha256 "e46c8a88602a9d2d04041ea3b9c395dd2da40d1a0c345b8b552f3ad8fa243dd9"
 
       def install
         bin.install "datamon2"
